@@ -5,15 +5,189 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+	<!-- LINK TO BOOTSTRAP -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- LINK TO GOOGLE FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:300" rel="stylesheet">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- LINK TO STYLESHEET -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-	<title></title>
+	
+	<title>TRAIN SCHEDULE</title>
 </head>
 <body>
+<!-- <div class="container">
+	<br> -->
+
+	<!-- Jumbotron Title -->
+	<!-- <div class="jumbotron">
+		<h1 class="text-center">Train Schedule</h1> -->
+		<!-- <h3 class="text-center">"All aboard for night train. Miami, Fl, Atlanta, Ga, Raleigh, NC...And, don't forget about New Orleans, the home of the blues"</h3> -->
+	<!-- </div> -->
+	<!-- Table of added information -->
+	<!-- <div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel1-title">Current Train Schedule</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped">
+						<thead>						
+							<tr> -->
+								<!-- <th>LEFT BLANK TO GET LABLES CENTERED</th> -->
+						<!-- 		<th id="name">Train Name</th>
+								<th id="destination">Destination</th>
+								<th id="frequency">Frequency (min)</th>
+								<th id="next">Next Arrival</th>
+								<th id="away">Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody id="trainRows">
+						</tbody>
+					</table>					
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Add Train Panel -->
+<!-- 	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Add Train</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-6">
+									<label for="trainName">Train Name</label>
+									<input type="text" class="form-control" id="addName">
+
+								</div>
+								<div class="col-md-6">
+									<label for="destination">Destination</label>
+									<input type="text" class="form-control" id="addDestination">
+								</div>	
+							</div>
+						</div>
+						<div class="form-group">
+							<label for=trainTime>First Train Time (HH:mm - military time)</label>
+							<div class = "row">	
+								<div class="form-group">
+									<div class="col-md-8">					
+										<label for="traintime"></label>
+										<input type="time" class="form-control" step="60" id="addTime">
+									</div>
+									<div class="col-md-3">
+										<label for="freqMin">Frequency (min)</label>
+										<input type="number" min="1" max="1440" class="form-control" id="addFreq">
+									</div>	
+								</div>	
+							</div>	
+						</div>
+						<button type="submit" class="btn btn-primary" id="submit"> Submit</button>
+					</form>		
+				</div>
+			</div>
+		</div>
+	</div>	
+</div> -->
+<div class="container">
+	<br>
+
+	<!-- Jumbotron Title -->
+	<div class="jumbotron">
+		<h1 class="text-center">Train Schedule</h1>
+		<!-- <h3 class="text-center">"All aboard for night train. Miami, Fl, Atlanta, Ga, Raleigh, NC...And, don't forget about New Orleans, the home of the blues"</h3> -->
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading" >
+						<h3 class="panel-title">Current Train Schedule</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<table class="table table-striped">
+							<thead>						
+								<tr class="infoTable"> 
+									<!-- <th>LEFT BLANK TO GET LABLES CENTERED</th> -->
+									<th id="name">Train Name</th>
+									<th id="destination">Destination</th>
+									<th id="frequency">Frequency (min)</th>
+									<th id="next">Next Arrival</th>
+									<th id="away">Minutes Away</th>
+								</tr>
+							</thead>
+						</table>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>			
+	<!-- Add Train Panel -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Add Train</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="row">
+							<div class="form-group col-xs-6">
+								<label for="trainName">Train Name</label>
+								<input type="text" class="form-control" id="addName">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-xs-6">
+								<label for="destination">Destination</label>
+								<input type="text" class="form-control" id="addDestination">
+							</div>	
+						</div>
+						<div class="form-group">
+							<label for=trTime>First Train Time (HH:mm-military time)</label>
+							<div class = "row">	
+								<div class="form-group col-xs-4">					
+									<label for="trtime"></label>
+									<input type="time" class="form-control" step="60" id="addTime" id="addTime">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-xs-2">
+								<label for="freqMin">Frequency (min)</label>
+								<input type="number" min="1" max="1440" class="form-control" id="addFreq">
+							</div>
+							<div class="form-group col-xs-2">
+								<button id="submitTrain" type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+						
+					</form>
+
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+
 
 </body>
+
+<!--moment.js-->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<!-- LINK TO FIREBASE GOES HERE -->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <!--Jquery 2.2.4-->
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <!-- Latest compiled and minified JavaScript -->

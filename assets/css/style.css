@@ -1,3 +1,20 @@
-html {
-	background: url("../images/dark_fish_skin.png");
+body {
+	background: url("../images/dark_fish_skin.png")no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover;
+  	color: black;
+  	font-family: 'Oswald', sans-serif; 
 }
+
+html{
+	font-family: 'Raleway', sans-serif;
+	color: black;
+}
+
+/*#submit {
+	float: right;
+	margin-right: 20px;
+}*/
+
