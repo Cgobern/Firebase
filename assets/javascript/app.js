@@ -1,10 +1,10 @@
 $(document).ready(function(){ 
-  // Initialize Firebase
+ // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBvxIXAMPH9qWxIJEcnLWO6OxfljyyoYsY",
     authDomain: "trainschedule-79140.firebaseapp.com",
     databaseURL: "https://trainschedule-79140.firebaseio.com",
-    storageBucket: "trainschedule-79140.appspot.com",
+    storageBucket: "",
   };
   firebase.initializeApp(config);
 
@@ -13,7 +13,6 @@ $(document).ready(function(){
 
 	//Initial values
 	var train = {
-		blank: "",
 		Name: "",
 		Dest: "",
 		Time: "",
@@ -23,7 +22,6 @@ $(document).ready(function(){
 	$("#submitTrain").on("click", function(){
 
 		//Getting new train input
-		train.blank = $('#addName').val().trim();
 		train.Name = $('#addName').val().trim();
 		train.Dest = $('#addDestination').val().trim();
 		train.Time = $('#addTime').val();
@@ -32,7 +30,6 @@ $(document).ready(function(){
 		//Creating temporary object for holding train new
 
 		var newTrain = {
-			blank: train.blank,
 			name: train.Name,
 			destination: train.Dest,
 			time: train.Time,
@@ -64,14 +61,6 @@ $(document).ready(function(){
 			//console.log(childSnapshot.val());
 
 		//Add stored trains to the schedule
-			train.blank = childSnapshot.val().newTrain.blank;
-				$('#blank').append('<div class="row" id="blankRow">');
-				$('#blankRow').append(train.blank);
-				//Add a new line for the next train
-				$('#blankRow').append("<br/>");
-
-
-
 			//assigning stored train names to a variable
 			train.Name = childSnapshot.val().newTrain.name;
 				$('#name').append('<div class="row" id="nameRow">');
