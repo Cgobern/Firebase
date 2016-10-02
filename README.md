@@ -1,2 +1,2 @@
 # Firebase
-utilizing Google's Firebase database to create a web application
+utilizing Google's Firebase to dynamically update a train schedule application
